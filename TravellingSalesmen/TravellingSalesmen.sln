@@ -11,6 +11,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SalesmenService", "Salesmen
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SalesmenFunctions", "SalesmenFunctions\SalesmenFunctions.csproj", "{00D63094-42E8-4187-AB92-FA42FAA34705}"
 EndProject
+Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "SalesmenDatabase", "SalesmenDatabase\SalesmenDatabase.sqlproj", "{682FF0BA-3D7B-4E7D-9CC6-0E88DEDA948D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SalesmenDataAccessLayer", "SalesmenDatabaseAPI\SalesmenDataAccessLayer.csproj", "{028339AE-B8E9-421C-BE9B-6223BB3BE635}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +37,16 @@ Global
 		{00D63094-42E8-4187-AB92-FA42FAA34705}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{00D63094-42E8-4187-AB92-FA42FAA34705}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{00D63094-42E8-4187-AB92-FA42FAA34705}.Release|Any CPU.Build.0 = Release|Any CPU
+		{682FF0BA-3D7B-4E7D-9CC6-0E88DEDA948D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{682FF0BA-3D7B-4E7D-9CC6-0E88DEDA948D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{682FF0BA-3D7B-4E7D-9CC6-0E88DEDA948D}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{682FF0BA-3D7B-4E7D-9CC6-0E88DEDA948D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{682FF0BA-3D7B-4E7D-9CC6-0E88DEDA948D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{682FF0BA-3D7B-4E7D-9CC6-0E88DEDA948D}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{028339AE-B8E9-421C-BE9B-6223BB3BE635}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{028339AE-B8E9-421C-BE9B-6223BB3BE635}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{028339AE-B8E9-421C-BE9B-6223BB3BE635}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{028339AE-B8E9-421C-BE9B-6223BB3BE635}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

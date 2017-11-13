@@ -4,9 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SalesmenEntities
+namespace SalesmenEntities.Interface
 {
-    public class Class1
+    public interface ISalesman
     {
+        Guid Id { get; }
+        string Name { get; }
     }
 }
