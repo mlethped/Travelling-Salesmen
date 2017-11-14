@@ -10,5 +10,6 @@ namespace SalesmenEntities.Interface
     {
         Guid Id { get; }
         string Name { get; }
+        bool PrimarySalesman { get; }
     }
 }

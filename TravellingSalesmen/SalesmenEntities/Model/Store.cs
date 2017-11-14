@@ -12,13 +12,13 @@ namespace SalesmenEntities.Model
     {
         public Guid Id { get; private set; }
         public string Name { get; private set; }
-        public IReadOnlyCollection<ISalesman> Salesmen { get; private set; }
+        public IList<ISalesman> Salesmen { get; private set; }
 
-        public Store(string name, IList<ISalesman> salesmen)
+        public Store(string name, IList<ISalesman> salesmen, Guid? id = null)
         {
-            Id = Guid.NewGuid();
+            Id = id ?? Guid.NewGuid();
             Name = name;
-            Salesmen = new ReadOnlyCollection<ISalesman>(salesmen);
+            Salesmen = new List<ISalesman>(salesmen);
         }
     }
 }

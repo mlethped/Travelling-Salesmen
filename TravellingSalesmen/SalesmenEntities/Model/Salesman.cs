@@ -11,11 +11,13 @@ namespace SalesmenEntities.Model
     {
         public Guid Id { get; private set; }
         public string Name { get; private set; }
+        public bool PrimarySalesman { get; }
 
-        public Salesman(string name)
+        public Salesman(string name, Guid? id = null, bool primarySalesman = false)
         {
-            Id = Guid.NewGuid();
+            Id = id ?? Guid.NewGuid();
             Name = name;
+            PrimarySalesman = primarySalesman;
         }
     }
 }

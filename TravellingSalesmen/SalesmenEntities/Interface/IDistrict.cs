@@ -10,7 +10,7 @@ namespace SalesmenEntities.Interface
     {
         Guid Id { get; }
         string Name { get; }
-        IReadOnlyCollection<IStore> Stores { get; }
-        IReadOnlyCollection<ISalesman> Salesmen { get; }
+        IList<IStore> Stores { get; }
+        IList<ISalesman> Salesmen { get; }
     }
 }

@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{6B4FE675-2A66-4A45-8E4A-28DB0A8F2682}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>TestApp</RootNamespace>
+    <AssemblyName>TestApp</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SalesmanDataAccessLayer\SalesmenDataAccessLayer.csproj">
+      <Project>{7dfa4ca0-4a59-45e3-8e09-4c2343be5204}</Project>
+      <Name>SalesmenDataAccessLayer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SalesmenDatabase\SalesmenDatabase.sqlproj">
+      <Project>{682ff0ba-3d7b-4e7d-9cc6-0e88deda948d}</Project>
+      <Name>SalesmenDatabase</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SalesmenEntities\SalesmenEntities.csproj">
+      <Project>{921e8dff-5ad6-41d9-b628-ddbcc804aae9}</Project>
+      <Name>SalesmenEntities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SalesmenFunctions\SalesmenFunctions.csproj">
+      <Project>{00d63094-42e8-4187-ab92-fa42faa34705}</Project>
+      <Name>SalesmenFunctions</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SalesmenPresentation\SalesmenPresentation.csproj">
+      <Project>{ff743fec-1609-4c0a-af9e-7c51e0c430a1}</Project>
+      <Name>SalesmenPresentation</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SalesmenService\SalesmenService.csproj">
+      <Project>{e1f96300-fd81-4758-aac8-e7ddd3f09843}</Project>
+      <Name>SalesmenService</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

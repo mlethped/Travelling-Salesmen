@@ -13,15 +13,15 @@ namespace SalesmenEntities.Model
     {
         public Guid Id { get; private set; }
         public string Name { get; private set; }
-        public IReadOnlyCollection<IStore> Stores { get; private set; }
-        public IReadOnlyCollection<ISalesman> Salesmen { get; private set; }
+        public IList<IStore> Stores { get; private set; }
+        public IList<ISalesman> Salesmen { get; private set; }
 
-        public District(string name, IList<IStore> stores, IList<ISalesman> salesmen)
+        public District(string name, IList<IStore> stores, IList<ISalesman> salesmen, Guid? id = null)
         {
-            Id = Guid.NewGuid();
+            Id = id ?? Guid.NewGuid();
             Name = name;
-            Stores = new ReadOnlyCollection<IStore>(stores);
-            Salesmen = new ReadOnlyCollection<ISalesman>(GetSalesmenFromStores(salesmen));
+            Stores = new List<IStore>(stores);
+            Salesmen = new List<ISalesman>(GetSalesmenFromStores(salesmen));
         }
 
         private IList<ISalesman> GetSalesmenFromStores(IList<ISalesman> salesmen)
